@@ -321,7 +321,13 @@
                                     <p class="mb-4">Recent work experience</p>
                                     <p class="mb-4">I am current working freelance, helping clients with their websites & providing advise on how to approach technology for their business</p>
                                     
-                                    <p class="mb-4">I am current working freelance, helping clients with their websites & providing advise on how to approach technology for their business</p>
+                                    <p class="mb-4">Previously I worked for Australia Post, where I worked on the Digital team and processed their stores raw sales data into reports. I also created and used custom PowerBI dashboard to help inform business decisions</p>
+                                    <p class="mb-4">I uplifted a VBA based order processing system. I utilised SQL in interaction with the existing database</p>
+                                    <p class="mb-4"></p>
+
+                                    <p class="mb-4">Monash University - eSolutions</p>
+                                    <p class="mb-4"></p>
+                                        
                                     </div>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
@@ -366,6 +372,34 @@
                 </div>
             </div>
         </div>
+
+// This example adds a marker to indicate the position of Bondi Beach in Sydney,
+// Australia.
+function initMap(): void {
+  const map = new google.maps.Map(
+    document.getElementById("map") as HTMLElement,
+    {
+      zoom: 4,
+      center: { lat: -33, lng: 151 },
+    }
+  );
+
+  const image =
+    "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
+  const beachMarker = new google.maps.Marker({
+    position: { lat: -33.89, lng: 151.274 },
+    map,
+    icon: image,
+  });
+}
+
+declare global {
+  interface Window {
+    initMap: () => void;
+  }
+}
+window.initMap = initMap;
+                    
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
